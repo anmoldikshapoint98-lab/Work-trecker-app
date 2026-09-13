@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'screens/login_screen.dart';
+
 class WorkTrackerApp extends StatelessWidget {
   const WorkTrackerApp({super.key});
 
@@ -14,29 +16,7 @@ class WorkTrackerApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('WORK TRACKER'),
-      ),
-      body: const Center(
-        child: Text(
-          'WORK TRACKER',
-          style: TextStyle(
-            fontSize: 28,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      home: const LoginScreen(),
     );
   }
 }
