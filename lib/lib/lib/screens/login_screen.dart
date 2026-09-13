@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'worker_home.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -26,15 +27,15 @@ class _LoginScreenState extends State<LoginScreen> {
 
     setState(() => loading = true);
 
-    // Firebase login बाद में जोड़ेंगे
     Future.delayed(const Duration(seconds: 1), () {
       if (!mounted) return;
 
       setState(() => loading = false);
 
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Login system अगली step में जोड़ा जाएगा'),
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const WorkerHome(),
         ),
       );
     });
